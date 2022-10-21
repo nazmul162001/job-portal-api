@@ -11,7 +11,7 @@ exports.signUp = async (req, res) => {
         }
 
         const user = await service.signUpService(userInfo)
-        res.status(400).json({ status: 'Failed', message: "User signed up successfully", data: user })
+        res.status(400).json({ status: 'Success', message: "User signed up successfully", data: user })
 
     } catch (error) {
         res.status(500).json({ status: 'Failed', error: error.message })
